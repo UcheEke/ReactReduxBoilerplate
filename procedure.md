@@ -34,6 +34,7 @@
 
     npm install --save-dev webpack webpack-dev-server
     npm install --save-dev babel-core babel-loader
+    npm install --save-dev babel-preset-react babel-preset-es2015 babel-preset-stage-2
     
     (Configuration is for webpack v2.*)
     
@@ -47,14 +48,7 @@
     const ExtractTextPlugin = require('extract-text-webpack-plugin');
     
     const VENDOR_LIBS = [
-        "axios",
-        "react",
-        "react-dom",
-        "react-redux",
-        "react-router",
-        "redux",
-        "redux-form",
-        "redux-promise"
+        // production dependencies from vendors go here
     ];
     
     module.exports = {
@@ -103,7 +97,7 @@
 
     {
         "presets" : [
-            "es2015", "react"    
+            "es2015", "react", "stage-2"  
         ]
     }
     
